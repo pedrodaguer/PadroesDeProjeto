@@ -1,5 +1,6 @@
 package br.com.daguer.padroesprojeto;
 
+import br.com.daguer.padroesprojeto.facade.Facade;
 import br.com.daguer.padroesprojeto.singleton.SingletonBasico;
 import br.com.daguer.padroesprojeto.singleton.SingletonEager;
 import br.com.daguer.padroesprojeto.singleton.SingletonHolder;
@@ -39,6 +40,9 @@ public class Teste {
         animal.setComportamento(comportamentoAnormal);
         animal.mover();
 
+        //Facade
+        Facade facade = Facade.getInstance();
+        facade.migrarCliente("PedroDaguer", "88330782");
     }
 
 }
